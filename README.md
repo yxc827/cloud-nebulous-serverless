@@ -22,7 +22,8 @@ On a high level, this is done in three stages: 1. Get familiar with how to run t
 - Go to [Google Cloud Console](https://console.cloud.google.com/home/dashboard?project=graphic-abbey-326020), click on the cloud shell button on the upper right to start up a terminal.
 - In the cloud shell command line, type 'gcloud init' at the command line, then go to the right directory by typing 'cd ~/cloud-nebulous-serverless/cloud/python'.
 - Then deploy by typing 'gcloud functions deploy translate --runtime python37 --trigger-http --allow-unauthenticated', this might take a few minutes
-- In the generate output, find the segment similar to >httpsTrigger:
+- In the generate output, find the segment similar to 
+  >httpsTrigger:
   >securityLevel: SECURE_OPTIONAL
   >url: https://us-central1-graphic-abbey-326020.cloudfunctions.net/translate
 - Click on the url, or type the url in your browser.

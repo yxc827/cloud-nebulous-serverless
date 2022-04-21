@@ -1,3 +1,34 @@
+# OUCS Team 2's Guide
+## Cloud Functions (Done by Yiting Cao)
+### How to modify the translation website into fractals website
+On a high level, this is done in three stages: 1. Get familiar with how to run the given translation website 2. Find out which file to modify 3. Create bucket to store images to display, modify the website to display the images, deploy the website again. Detailed steps are below:
+#### First stage
+- Fork the cloud-nebulous-severless github.
+- Open GCP console and create a new project.
+- Start cloud shell, type 'git clone https://github.com/googlecodelabs/cloud-nebulous-serverless.git'.
+- Go to the target folder by typing 'cd ~/cloud-nebulous-serverless/cloud/python'.
+- Follow the [code lab](https://codelabs.developers.google.com/codelabs/cloud-nebulous-serverless-python-gcf?utm_source=codelabs&utm_medium=et&utm_campaign=CDR_wes_aap-serverless_nebservgcf_sms_201020&utm_content=-#0) to deploy the original translate website.
+#### Second stage
+- Find where to modify by typing 'grep -r "My Google Translate" *'.
+- This shows the target html file is in the 'template' folder, type 'cd template'.
+#### Third stage
+- Go to the 'Navigation Menu' on the left hand side of the console, click on 'Cloud Storage>Browser'. Click on 'CREATE BUCKET', type in a name and click 'CREATE'.
+-  Once the bucket is created, click on the three dots on the right and 'Edit Access'. Click 'Add Principles'. Type 'allUsers' as New Principles. In the second box, search 'Storage Object Viewer' and click on it in the drop down. Click 'SAVE' and click 'ALLOW PUBLIC ACCESS'.
+-  Click on the created bucket and upload local images to the bucket by clicking 'UPLOAD FILES'.
+-  Once images are in the bucket, use the 'Copy URL' button under 'Public Access' to get the url for each image.
+-  Type 'vim index.html' then 'i' to edit the html file, include images through setting 'src' as the urls obtained in the previous step. Use 'Esc' then type ':wq' to save and exit.
+-  Go back to the previous directory by typing 'cd ..' at command line, then type 'gcloud functions deploy translate --runtime python37 --trigger-http --allow-unauthenticated' to deploy the website again. This may take a few minutes. In the generated output, click on the url with the form 'https://ZONE-PROJECT_NAME.cloudfunctions.net/translate', this should take you to the new website.
+### How to use GCP to display the fractals website
+- Go to [Google Cloud Console](https://console.cloud.google.com/home/dashboard?project=graphic-abbey-326020), click on the cloud shell button on the upper right to start up a terminal.
+- In the cloud shell command line, type 'gcloud init' at the command line, then go to the right directory by typing 'cd ~/cloud-nebulous-serverless/cloud/python'.
+- Then deploy by typing 'gcloud functions deploy translate --runtime python37 --trigger-http --allow-unauthenticated', this might take a few minutes
+- In the generate output, find the segment similar to >httpsTrigger:
+  >securityLevel: SECURE_OPTIONAL
+  >url: https://us-central1-graphic-abbey-326020.cloudfunctions.net/translate
+- Click on the url, or type the url in your browser.
+- You should now be able to see the content on the fractals website.
+
+
 | :boom: ALERT!!             |
 |:---------------------------|
 | This repo will soon be relocating to [GoogleCloudPlatform](https://github.com/GoogleCloudPlatform) as we better organize these code samples! Stay tuned as more info is coming soon. |

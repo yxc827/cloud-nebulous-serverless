@@ -29,6 +29,16 @@ On a high level, this is done in three stages: 1. Get familiar with how to run t
 - Click on the url, or type the url in your browser.
 - You should now be able to see the content on the fractals website.
 
+## Cloud Run
+Continued working on same project in which Cloud Function is done
+- Fork the cloud-nebulous-serverless project on github
+- Activated cloudshell and cloned our project
+- Changed the directory to the target folder
+- Made sure that Cloud Translation API, Cloud Run and Cloud Artifact Registry APIs are enabled
+- In the dockerfile, changed the python version from 2 to 3
+- Deployed the translation service to Cloud Run
+- Now our application is available globally and we are able to translate English text to Spanish using the app
+
 
 | :boom: ALERT!!             |
 |:---------------------------|

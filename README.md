@@ -38,7 +38,7 @@ Continued working on same project in which Cloud Function is done
 - In the dockerfile, changed the python version from 2 to 3
 - Deployed the translation service to Cloud Run by running the command 'gcloud run deploy translate --source . --allow-unauthenticated --platform managed'
 - On deploying the service, we got a service URL
-  Service URL : https://translate-vr34iishva-uc.a.run.app/
+  >Service URL : https://translate-vr34iishva-uc.a.run.app/
 - On clicking the URL or typing the URL in the browser, our application opens
 - Now our application is available globally and it shows fractals of dragon, tree and triangle in high and low resolution
 

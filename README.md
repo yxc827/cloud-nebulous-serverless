@@ -36,7 +36,9 @@ Continued working on same project in which Cloud Function is done
 - Changed the directory to the target folder
 - Made sure that Cloud Translation API, Cloud Run and Cloud Artifact Registry APIs are enabled
 - In the dockerfile, changed the python version from 2 to 3
-- Deployed the translation service to Cloud Run
+- Deployed the translation service to Cloud Run by running the command 'gcloud run deploy translate --source . --allow-unauthenticated --platform managed'
+- On deploying the service, we got a service URL
+- On clicking the URL or typing the URL in the browser, our application opens
 - Now our application is available globally and we are able to translate English text to Spanish using the app
 
 

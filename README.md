@@ -42,11 +42,11 @@ Continued working on same project in which Cloud Function is done
 - On clicking the URL or typing the URL in the browser, our application opens
 - Now our application is available globally and it shows fractals of dragon, tree and triangle in high and low resolution
 ## Marp for VS Code
- -Install VS Code Latest Version
- -In the Extensions Type Marp for VS Code
- -Click Install
- -Add a new File -> File name as Slideshow.md
- -Include all the documentation from the readme file in the Marp file
+ - Install VS Code Latest Version
+ - In the Extensions Type Marp for VS Code
+ - Click Install
+ - Add a new File -> File name as Slideshow.md
+ - Include all the documentation from the readme file in the Marp file
 
 | :boom: ALERT!!             |
 |:---------------------------|

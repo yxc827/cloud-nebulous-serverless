@@ -1,5 +1,5 @@
 # OUCS Team 2's Guide
-## Cloud Functions (Done by Yiting Cao)
+## Cloud Functions
 ### How to modify the translation website into fractals website
 On a high level, this is done in three stages: 1. Get familiar with how to run the given translation website 2. Find out which file to modify 3. Create bucket to store images to display, modify the website to display the images, deploy the website again. Detailed steps are below:
 #### First stage
